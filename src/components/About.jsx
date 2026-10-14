@@ -1,5 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { PORTRAIT, tick } from '../utils/helpers';
+import photo1 from '../assets/photos/photo-1.jpg';
+import photo2 from '../assets/photos/photo-2.jpg';
+import photo3 from '../assets/photos/photo-3.jpg';
+import photo4 from '../assets/photos/photo-4.jpg';
 
 // Five frames, left to right
 const FRAME_LAYOUT = [
@@ -14,11 +18,11 @@ const FRAME_LAYOUT = [
 // Frames 0, 1, 3, 4 are secondary photos.
 // Frame 2 is the actual Hero cutout portrait (empty until settled).
 const PHOTOS = [
-  '/photos/photo-4.jpg',
-  '/photos/photo-2.jpg',
+  photo4,
+  photo2,
   PORTRAIT,
-  '/photos/photo-1.jpg',
-  '/photos/photo-3.jpg',
+  photo1,
+  photo3,
 ];
 
 /**
