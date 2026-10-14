@@ -213,9 +213,19 @@ export default function Projects() {
     <section id="ventures" className="ventures-section" ref={containerRef}>
       <div className="ventures-sticky-stage">
         {/* Section Header */}
-        <div className="ventures-hd">
-          <span className="ventures-sub-label">FEATURED SYSTEM ARCHITECTURE</span>
-          <span className="ventures-count-label">04 / PROJECTS</span>
+        <div className="hd ventures-hd">
+          <div>
+            <p className="eb">Selected Projects</p>
+            <h2
+              className="d h2 h2s"
+              style={{ maxWidth: '16ch', lineHeight: 0.95 }}
+              data-a="lines"
+              data-st="90"
+            >
+              <span>Products built with intent.</span>
+            </h2>
+          </div>
+          <p className="sm">04 / Projects</p>
         </div>
 
         {/* Pinned Stacking Card Stage */}
