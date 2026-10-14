@@ -282,15 +282,15 @@ h1.nm .ln{white-space:nowrap}
 }
 .ventures-hd{
   width:100%;
-  max-width:1120px;
-  align-self:center;
+  max-width:none;
+  align-self:stretch;
   margin-bottom:0;
   flex-shrink:0;
 }
 .ventures-hd h2{
-  font-size:clamp(1.8rem, 3.2vw, 2.8rem)!important;
-  margin-top:.3rem!important;
-  line-height:1!important;
+  font-size:clamp(2.5rem, 4.2vw, 4.2rem)!important;
+  margin-top:.4rem!important;
+  line-height:.95!important;
 }
 .hd{display:flex;flex-direction:column;gap:1.5rem}
 @media(min-width:640px){.hd{flex-direction:row;align-items:flex-end;justify-content:space-between}}
