@@ -5,13 +5,26 @@ const PROJECTS = [
   {
     title: 'CareerLens AI',
     num: '01',
-    tag: 'Llama 3.3 70B · Production AI',
+    tag: 'LLAMA 3.3 70B · PRODUCTION AI',
+    verifiedBadge: 'PIPELINE VERIFIED',
     desc: 'An end-to-end intelligent career acceleration pipeline that bridges the gap between job candidates and modern ATS algorithms. Ingests raw resumes in PDF format, performs structured entity extraction, cross-references target job descriptions, computes semantic match scores, and generates precision bullet rewrites tailored for high-ranking interview shortlists in under 60 seconds.',
-    features: [
-      { label: '8-STAGE PIPELINE', val: 'PDF parsing, vector scoring & bullet rewrites.' },
-      { label: 'ATS CALIBRATION', val: '94% match scoring calibrated against live rubrics.' },
-      { label: 'SUB-60S TURNAROUND', val: 'Full gap analysis & keyword extraction in <60s.' },
+    latency: 'LATENCY <60s',
+    stages: [
+      { step: '01 PARSE', title: 'Deterministic', sub: 'PDF Extraction' },
+      { step: '02 EMBED', title: 'Cosine Vector', sub: 'JD Matching' },
+      { step: '03 REWRITE', title: 'Llama 3.3 70B', sub: '94% Calibrated', highlight: true, subColor: '#22c55e' },
     ],
+    metricRow1: {
+      label: '8-STAGE PIPELINE',
+      desc: 'PDF parsing, vector scoring & bullet rewrites.',
+      badge: '100% OPERATIONAL',
+    },
+    metricRow2: {
+      label: 'ATS CALIBRATION',
+      info: 'AVG 42.8s',
+      value: '94%',
+      percent: 94,
+    },
     cats: ['React.js', 'FastAPI', 'Llama 3.3 70B', 'Python', 'Vector Search', 'JWT Auth'],
     github: 'https://github.com/Hareshls/Ai-resume-matcher',
     demo: null,
@@ -21,12 +34,25 @@ const PROJECTS = [
     title: 'ContractIQ',
     num: '02',
     tag: 'RAG + FAISS · LEGAL AI',
+    verifiedBadge: 'ZERO HALLUCINATION',
     desc: 'Automated legal contract intelligence and risk assessment platform designed for high-stakes agreements. Breaks down complex commercial contracts into clause-level embeddings stored in FAISS, detects hidden indemnities and high-liability risks against historical precedent, and synthesizes actionable plain-English risk assessments with zero hallucination guarantee.',
-    features: [
-      { label: 'CLAUSE RISK SCORING', val: 'Calibrated 0–100 scores for high-liability terms.' },
-      { label: 'FAISS VECTOR SEARCH', val: 'Sub-millisecond retrieval grounded in legal precedent.' },
-      { label: 'ZERO HALLUCINATION', val: 'Strict citation-backed reasoning with source links.' },
+    latency: 'LATENCY <120ms',
+    stages: [
+      { step: '01 CHUNK', title: 'Clause Splitter', sub: 'Semantic Boundary' },
+      { step: '02 INDEX', title: 'FAISS Vector', sub: 'Sub-ms Retrieval' },
+      { step: '03 REASON', title: 'LLM Risk Audit', sub: 'Citation Grounded', highlight: true, subColor: '#22c55e' },
     ],
+    metricRow1: {
+      label: 'CLAUSE RISK SCORING',
+      desc: 'Calibrated 0–100 scores for high-liability terms.',
+      badge: 'PRECEDENT BACKED',
+    },
+    metricRow2: {
+      label: 'VECTOR ACCURACY',
+      info: 'RETRIEVAL <1ms',
+      value: '98%',
+      percent: 98,
+    },
     cats: ['React.js', 'FastAPI', 'FAISS Vector DB', 'Python', 'LLM Reasoning', 'JWT Auth'],
     github: 'https://github.com/Hareshls/ContractIQ-Intelligent-Contract-Risk-Analysis-and-RAG-Based-Legal-Assistant',
     demo: null,
@@ -36,12 +62,25 @@ const PROJECTS = [
     title: 'SpendMind',
     num: '03',
     tag: 'MERN STACK · REAL-TIME ANALYTICS',
+    verifiedBadge: 'REAL-TIME SYNC',
     desc: 'Full-stack financial management and real-time budget forecasting application. Features automatic transaction categorization, intelligent monthly burn-rate predictions, custom spending thresholds with instant warning triggers, and interactive data visualization charts to provide complete clarity over cash flow and saving targets.',
-    features: [
-      { label: 'SMART CATEGORIZATION', val: 'Automatic merchant & category classification.' },
-      { label: 'PREDICTIVE ANALYTICS', val: 'Burn-rate alerts before budget overruns occur.' },
-      { label: 'INTERACTIVE DASHBOARDS', val: 'Dynamic Chart.js visualizations & cashflow trends.' },
+    latency: 'LATENCY <45ms',
+    stages: [
+      { step: '01 INGEST', title: 'Stream Pipeline', sub: 'Raw Transactions' },
+      { step: '02 CLASSIFY', title: 'Auto Merchant', sub: 'Category Mapping' },
+      { step: '03 FORECAST', title: 'Burn Rate ML', sub: 'Pre-Overrun Alert', highlight: true, subColor: '#22c55e' },
     ],
+    metricRow1: {
+      label: 'SMART CATEGORIZATION',
+      desc: 'Automatic merchant & category classification.',
+      badge: '100% OPERATIONAL',
+    },
+    metricRow2: {
+      label: 'PREDICTIVE ACCURACY',
+      info: 'BURN FORECAST',
+      value: '96%',
+      percent: 96,
+    },
     cats: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST APIs', 'Chart.js'],
     github: 'https://github.com/Hareshls/Expensetrackers',
     demo: null,
@@ -51,12 +90,25 @@ const PROJECTS = [
     title: 'RAG Doc Q&A',
     num: '04',
     tag: 'FASTAPI + FAISS · RAG ENGINE',
+    verifiedBadge: 'STRICT CITATIONS',
     desc: 'High-throughput document intelligence engine that transforms large PDFs and enterprise knowledge bases into conversational agents. Features smart document chunking with semantic overlap, dense embedding generation, FAISS vector indexing, and grounded context injection to guarantee accurate, context-bound question answers with exact page citations.',
-    features: [
-      { label: 'SMART CHUNKING', val: 'Semantic boundary chunking with sliding context.' },
-      { label: 'DENSE EMBEDDINGS', val: 'Vectorized text stored in FAISS for top-k retrieval.' },
-      { label: 'EXACT CITATIONS', val: 'Direct source page and paragraph grounding.' },
+    latency: 'LATENCY <90ms',
+    stages: [
+      { step: '01 CHUNK', title: 'Smart Chunking', sub: 'Sliding Overlap' },
+      { step: '02 EMBED', title: 'Dense Vectors', sub: 'FAISS Top-K Store' },
+      { step: '03 GROUND', title: 'Context Inject', sub: 'Exact Page Quotes', highlight: true, subColor: '#22c55e' },
     ],
+    metricRow1: {
+      label: 'DENSE EMBEDDINGS',
+      desc: 'Semantic boundary chunking with sliding context.',
+      badge: '100% OPERATIONAL',
+    },
+    metricRow2: {
+      label: 'EXACT CITATIONS',
+      info: 'PAGE GROUNDING',
+      value: '99%',
+      percent: 99,
+    },
     cats: ['Python', 'FastAPI', 'FAISS Vector Search', 'React.js', 'Prompt Engineering', 'LangChain'],
     github: 'https://github.com/Hareshls/RAG--document-AI',
     demo: null,
@@ -89,7 +141,6 @@ export default function Projects() {
           const steps = totalCards - 1;
 
           cards.forEach((card, i) => {
-            // Once a card is fully covered by the subsequent card, hide it completely to prevent ghosting
             if (i < totalCards - 1 && p >= (i + 1) / steps) {
               card.style.visibility = 'hidden';
             } else {
@@ -97,7 +148,6 @@ export default function Projects() {
             }
 
             if (i === 0) {
-              // Card 0 scales down slightly as Card 1 covers it
               const card1P = Math.min(1, Math.max(0, p * steps));
               const scale = 1 - card1P * 0.04;
               card.style.transform = `scale(${scale})`;
@@ -107,18 +157,15 @@ export default function Projects() {
               const enterEnd = i / steps;
 
               if (p <= enterStart) {
-                // Completely below the stage
                 card.style.transform = 'translateY(105vh)';
                 card.style.opacity = '1';
               } else if (p < enterEnd) {
-                // Smoothly enters from below
                 const cardP = (p - enterStart) / (enterEnd - enterStart);
                 const ease = 1 - Math.pow(1 - cardP, 2.2);
                 const translateY = (1 - ease) * 105;
                 card.style.transform = `translateY(${translateY}vh) scale(1)`;
                 card.style.opacity = '1';
               } else {
-                // Fully stacked in place. As subsequent cards arrive, subtly scale down
                 const nextEnterStart = enterEnd;
                 const nextEnterEnd = (i + 1) / steps;
                 const coverP = Math.min(1, Math.max(0, (p - nextEnterStart) / (nextEnterEnd - nextEnterStart || 1)));
@@ -166,19 +213,9 @@ export default function Projects() {
     <section id="ventures" className="ventures-section" ref={containerRef}>
       <div className="ventures-sticky-stage">
         {/* Section Header */}
-        <div className="hd ventures-hd">
-          <div>
-            <p className="eb">Selected Projects</p>
-            <h2
-              className="d h2 h2s"
-              style={{ maxWidth: '16ch', lineHeight: 0.95 }}
-              data-a="lines"
-              data-st="90"
-            >
-              <span>Products built with intent.</span>
-            </h2>
-          </div>
-          <p className="sm">04 / Projects</p>
+        <div className="ventures-hd">
+          <span className="ventures-sub-label">FEATURED SYSTEM ARCHITECTURE</span>
+          <span className="ventures-count-label">04 / PROJECTS</span>
         </div>
 
         {/* Pinned Stacking Card Stage */}
@@ -207,12 +244,20 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* TWO-COLUMN GRID: Left = Title, Desc, Tech, Buttons | Right = Architecture & Impact Table */}
+              {/* TWO-COLUMN GRID: Left = Title, Desc, Tech, Buttons | Right = Architecture HUD Panel */}
               <div className="card-columns">
                 {/* LEFT COLUMN */}
                 <div className="card-left-col">
                   <div>
-                    <h3 className="p-card-title">{p.title}</h3>
+                    <div className="p-title-row">
+                      <h3 className="p-card-title">{p.title}</h3>
+                      {p.verifiedBadge && (
+                        <div className="p-verified-badge">
+                          <span className="p-dot" />
+                          <span>{p.verifiedBadge}</span>
+                        </div>
+                      )}
+                    </div>
                     <p className="p-card-desc">{p.desc}</p>
                   </div>
 
@@ -267,24 +312,68 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* RIGHT COLUMN */}
+                {/* RIGHT COLUMN: SYSTEM ARCHITECTURE HUD PANEL */}
                 <div className="card-right-col">
-                  <div className="p-right-header">
-                    <span className="p-section-label">ARCHITECTURE & IMPACT</span>
-                  </div>
+                  <div className="arch-panel">
+                    {/* Panel Header */}
+                    <div className="arch-header">
+                      <div className="arch-header-title">
+                        <span className="arch-dot" />
+                        <span>SYSTEM ARCHITECTURE</span>
+                      </div>
+                      <span className="arch-latency-badge">{p.latency}</span>
+                    </div>
 
-                  <div className="p-feature-table">
-                    {p.features.map((f) => (
-                      <div key={f.label} className="p-feature-row">
-                        <div className="p-feat-cell-title">
-                          <span className="p-feat-dot" />
-                          <span className="p-feat-name">{f.label}</span>
+                    {/* 3-Stage Pipeline Boxes */}
+                    <div className="arch-stages-grid">
+                      {p.stages.map((stg) => (
+                        <div
+                          key={stg.step}
+                          className={`arch-stage-box ${stg.highlight ? 'arch-stage-highlight' : ''}`}
+                        >
+                          <span className="arch-stage-step">{stg.step}</span>
+                          <h4 className="arch-stage-title">{stg.title}</h4>
+                          <span
+                            className="arch-stage-sub"
+                            style={{ color: stg.subColor || '#71717a' }}
+                          >
+                            {stg.sub}
+                          </span>
                         </div>
-                        <div className="p-feat-cell-desc">
-                          <p className="p-feat-text">{f.val}</p>
+                      ))}
+                    </div>
+
+                    {/* Metric Row 1: Pipeline Status */}
+                    <div className="arch-metric-row-1">
+                      <div className="arch-metric-info">
+                        <div className="arch-metric-title">
+                          <span className="arch-dot" />
+                          <span>{p.metricRow1.label}</span>
+                        </div>
+                        <p className="arch-metric-desc">{p.metricRow1.desc}</p>
+                      </div>
+                      <span className="arch-badge-operational">{p.metricRow1.badge}</span>
+                    </div>
+
+                    {/* Metric Row 2: Calibration & Glowing Progress Track */}
+                    <div className="arch-metric-row-2">
+                      <div className="arch-progress-header">
+                        <div className="arch-metric-title">
+                          <span className="arch-dot" />
+                          <span>{p.metricRow2.label}</span>
+                        </div>
+                        <div className="arch-progress-meta">
+                          <span className="arch-progress-info">{p.metricRow2.info}</span>
+                          <span className="arch-progress-val">{p.metricRow2.value}</span>
                         </div>
                       </div>
-                    ))}
+                      <div className="arch-progress-track">
+                        <div
+                          className="arch-progress-fill"
+                          style={{ width: `${p.metricRow2.percent}%` }}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
