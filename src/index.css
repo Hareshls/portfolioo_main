@@ -434,7 +434,7 @@ h1.nm .ln{white-space:nowrap}
 }
 .p-card-title{
   font-family:var(--fd);
-  font-size:clamp(2.3rem, 3.2vw, 3.2rem);
+  font-size:3.2rem;
   line-height:.95;
   letter-spacing:0.04em;
   text-transform:uppercase;
@@ -462,7 +462,7 @@ h1.nm .ln{white-space:nowrap}
   white-space:nowrap;
 }
 .p-card-desc{
-  font-size:clamp(.86rem, .95vw, .95rem);
+  font-size:.92rem;
   line-height:1.6;
   color:#d1d1d6;
   margin:0;
