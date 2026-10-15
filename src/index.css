@@ -5,7 +5,7 @@
 ul{list-style:none}a,button{color:inherit;font:inherit;background:none;border:0;text-decoration:none;cursor:pointer}
 :root{--bg:#08080a;--fg:#f3f1ea;--s:#111114;--s2:#17171b;--mut:#807f78;--line:rgba(243,241,234,.1);--ls:rgba(243,241,234,.22);--acc:#ff3b1d;--gut:2.5rem;--sec:9rem;--fd:"Anton",sans-serif;--fs:"Onest",sans-serif;--ex:cubic-bezier(.16,1,.3,1)}
 html{font-size:16px;background:var(--bg)}
-@media(max-width:1920px){html{font-size:.833333vw}}
+@media(max-width:1920px){html{font-size:max(16px,.833333vw)}}
 @media(max-width:1440px){html{font-size:1.111111vw}}
 @media(max-width:1024px){html{font-size:1.5625vw}}
 @media(max-width:640px){html{font-size:4.444444vw}:root{--gut:16px}}
