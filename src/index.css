@@ -278,7 +278,7 @@ h1.nm .ln{white-space:nowrap}
   overflow:hidden;
   box-sizing:border-box;
   z-index:10;
-  gap:1rem;
+  gap:.75rem;
 }
 .ventures-hd{
   width:100%;
@@ -288,7 +288,7 @@ h1.nm .ln{white-space:nowrap}
   flex-shrink:0;
 }
 .ventures-hd h2{
-  font-size:clamp(2.5rem, 4.2vw, 4.2rem)!important;
+  font-size:clamp(2.5rem, 3.4rem, 4.2rem)!important;
   margin-top:.4rem!important;
   line-height:.95!important;
 }
@@ -303,7 +303,7 @@ h1.nm .ln{white-space:nowrap}
   width:100%;
   max-width:1120px;
   align-self:center;
-  height:clamp(470px, 58vh, 520px);
+  height:clamp(29rem, 32rem, 33rem);
   flex-shrink:0;
 }
 
@@ -774,21 +774,21 @@ h1.nm .ln{white-space:nowrap}
 /* Responsive Scaling */
 @media (max-height: 720px){
   .ventures-sticky-stage{
-    gap:.45rem;
-    padding:.65rem var(--gut);
+    gap:.35rem;
+    padding:.55rem var(--gut);
   }
   .ventures-hd h2{
-    font-size:clamp(1.4rem, 2vw, 2rem)!important;
+    font-size:clamp(1.8rem, 2.6rem, 3rem)!important;
     margin-top:.15rem!important;
   }
   .cards-stage{
-    height:clamp(410px, 66vh, 460px);
+    height:clamp(26rem, 29rem, 31rem);
   }
   .stage-card{
     padding:1.2rem 1.6rem;
   }
   .p-card-title{
-    font-size:clamp(1.7rem, 2.2vw, 2.2rem);
+    font-size:clamp(1.7rem, 2.2rem, 2.4rem);
   }
   .p-card-desc{
     font-size:.78rem;
@@ -813,7 +813,7 @@ h1.nm .ln{white-space:nowrap}
 }
 @media (max-width: 1023px){
   .cards-stage{
-    height:min(680px, calc(100svh - 100px));
+    height:clamp(28rem, 34rem, 38rem);
   }
   .card-columns{
     grid-template-columns:1fr;
@@ -829,7 +829,7 @@ h1.nm .ln{white-space:nowrap}
     font-size:.72rem;
   }
   .cards-stage{
-    height:min(640px, calc(100svh - 80px));
+    height:clamp(26rem, 30rem, 34rem);
   }
   .stage-card{
     padding:1.25rem 1.25rem;
