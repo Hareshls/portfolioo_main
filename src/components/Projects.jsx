@@ -283,28 +283,6 @@ export default function Projects() {
                   </div>
 
                   <div className="p-action-buttons">
-                    {p.demo ? (
-                      <a
-                        href={p.demo}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="p-btn-demo"
-                        aria-label={`Open Live Demo for ${p.title}`}
-                      >
-                        <span className="p-btn-demo-dot" />
-                        <span>Live Demo</span>
-                        <span className="p-arrow">↗</span>
-                      </a>
-                    ) : (
-                      <span
-                        className="p-btn-demo p-btn-disabled"
-                        aria-label={`${p.title} Live Demo`}
-                      >
-                        <span className="p-btn-demo-dot" />
-                        <span>Live Demo</span>
-                        <span className="p-arrow">↗</span>
-                      </span>
-                    )}
 
                     <a
                       href={p.github}
